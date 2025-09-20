@@ -31,7 +31,8 @@ plog(f"perceptron 1:\n   - inputs: {p1.inputs}\n   - bias: {p1.b}\n   - forward:
 #              ↑
 #            (w, b)
 #
-single_layer_perceptron = None
+single_layer_perceptron = single_layer_perceptron = Perceptron(inputs=[i1], b=b1).a
+
 
 plog(f"Salida de la red de una sola capa: {single_layer_perceptron}", level=ERROR if single_layer_perceptron is None else DEBUG, eol=True)
 
@@ -46,7 +47,11 @@ plog(f"Salida de la red de una sola capa: {single_layer_perceptron}", level=ERRO
 #              ↑                          ↑
 #            (w1, b1)                   (w2, b2)
 #
-two_layer_network = None
+# Ejercicio 2: Red de dos neuronas y una sola entrada
+# Primera neurona
+two_layer_network = Perceptron(inputs=[InputData(x=Perceptron(inputs=[i1], b=b1).a)], 
+    b=b1
+).a
 
 plog(f"Salida de la red de dos capas: {two_layer_network}", level=ERROR if two_layer_network is None else DEBUG, eol=True)
 
@@ -66,7 +71,16 @@ plog(f"Salida de la red de dos capas: {two_layer_network}", level=ERROR if two_l
 #       ↗      ↘                ↗         
 #   x2 ─────────► [ Neurona 2 ]
 #
-small_network = None
+
+# Ejercicio 3: Red de dos neuronas y dos entradas
+# Capa oculta: dos neuronas reciben i1 e i2
+small_network =Perceptron(
+    inputs=[
+        InputData(x=Perceptron(inputs=[i1, i2], b=b1).a),
+        InputData(x=Perceptron(inputs=[i1, i2], b=b1).a)
+    ],
+    b=b1
+).a
 #erferferferf
 plog(f"Salida de la red de pequeña: {small_network}", level=ERROR if small_network is None else DEBUG, eol=True)
 ##fefwes
