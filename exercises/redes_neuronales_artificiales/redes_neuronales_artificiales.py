@@ -37,7 +37,7 @@ single_layer_perceptron = single_layer_perceptron = Perceptron(inputs=[i1], b=b1
 plog(f"Salida de la red de una sola capa: {single_layer_perceptron}", level=ERROR if single_layer_perceptron is None else DEBUG, eol=True)
 
 # Ejercicio 2: Red de dos neuronas y una entrada.
-#
+# caliz
 # TODO: Crea una red neuronal de dos perceptrones y una sola entrada con los objetos previamente creados.
 #       Asigna el valor de la salida a "two_layer_network"
 #
