@@ -40,7 +40,7 @@ plog(f"Salida de la red de una sola capa: {single_layer_perceptron}", level=ERRO
 # caliz
 # TODO: Crea una red neuronal de dos perceptrones y una sola entrada con los objetos previamente creados.
 #       Asigna el valor de la salida a "two_layer_network"
-#
+# calizzzzz
 # NOTE: Toma como referencia el diagrama conceptual de la red.
 #
 #   x1 ──► [ Neurona 1 ] ──► a1 ──► [ Neurona 2 ] ──► a2
